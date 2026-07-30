@@ -1,39 +1,93 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CBCT RRT*</title>
   <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f6f8;
+            color: #1a1a2e;
+        }
+        .page-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 32px 20px 28px;
+            text-align: center;
+        }
+        .page-title {
+            margin: 0 0 26px;
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #1a1a2e;
+        }
+        .logo-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+        }
         .logo {
-            width: 100px; /* Changed from 60px to create a rectangle */
+            width: 100px;
             height: 80px;
-            object-fit: contain; /* This ensures the logo fits well within the dimensions */
+            object-fit: contain;
+        }
+        .links-row {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .link-pill {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #3730a3;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.15s ease, transform 0.15s ease;
+        }
+        .link-pill:hover {
+            background: #dfe4ff;
+            transform: translateY(-1px);
+        }
+        .chart-card {
+            max-width: 1240px;
+            margin: 28px auto 48px;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.04);
+            padding: 20px;
+            overflow: hidden;
+        }
+        @media (max-width: 640px) {
+            .logo { width: 72px; height: 58px; }
+            .chart-card { margin: 16px 12px 32px; padding: 12px; border-radius: 10px; }
         }
   </style>
 </head>
 <body>
-  <div style="display: flex; align-items: center; justify-content: center; position: relative; padding: 20px; font-family: sans-serif; min-height: 100px;">
-        <!-- Logos on the left -->
-        
-
-        <!-- Centered Links -->
-        <div style="text-align: center;  display: block;">
-          <div style=" gap: 15px;">
-            <!-- 
-              Instructions for GitHub Pages:
-              1. Create a folder named 'assets' or 'images' in your repository.
-              2. Upload your logo files (e.g., logo1.png, logo2.svg) into that folder.
-              3. Change the 'src' attribute below to the correct path, like 'assets/your-logo-name.png'.
-            -->
-            <img src="imgs/ug.png" alt="Logo 2" class="logo">
-            <img src="imgs/biomedlab.png" alt="Logo 1" class="logo">
-            <img src="imgs/diagnostix.jpeg" alt="Logo 3" class="logo">
-        </div>
-
-            <h2><a href="https://ieeexplore.ieee.org/abstract/document/10783618" target="_blank" rel="noopener noreferrer">Enlace al paper</a></h2>
-            <h2><a href="https://bit.ly/jpri_linkedin" target="_blank" rel="noopener noreferrer">JP Rordríguez Illescas - LinkedIn</a></h2>
-        </div>
+  <div class="page-header">
+    <!-- <h1 class="page-title">CBCT RRT*</h1> -->
+    <div class="logo-row">
+      <img src="imgs/ug.png" alt="Universidad Galileo" class="logo">
+      <img src="imgs/biomedlab.png" alt="BiomedLab" class="logo">
+      <img src="imgs/diagnostix.jpeg" alt="DiagnostiX" class="logo">
     </div>
+    <div class="links-row">
+      <a href="https://ieeexplore.ieee.org/abstract/document/10783618" target="_blank" rel="noopener noreferrer" class="link-pill">Enlace al paper</a>
+      <a href="https://bit.ly/jpri_linkedin" target="_blank" rel="noopener noreferrer" class="link-pill">JP Rodríguez Illescas – LinkedIn</a>
+    </div>
+  </div>
 
-    <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+    <div class="chart-card">                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
         <script type="text/javascript">/**
 * plotly.js v3.0.0
 * Copyright 2012-2025, Plotly, Inc.
